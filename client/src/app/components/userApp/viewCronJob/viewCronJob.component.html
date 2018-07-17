@@ -1,0 +1,15 @@
+<mat-card >
+  <mat-card-content >
+    <div class="shell-wrap">
+      <p class="shell-top-bar">SteemBot AutoFollower</p>
+      <ul class="shell-body" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+        <ng-template ngFor let-log [ngForOf]="logs">
+          <li>{{ log.date}}  {{ log.message}}</li>
+        </ng-template>
+      </ul>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button (click)="cancelJob()">Cancel this job</button>
+  </mat-card-actions>
+</mat-card>
